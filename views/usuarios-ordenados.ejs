@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+     
+<script src="msql.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios Ordenados por Burbuja</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Usuarios Ordenados por Nombre</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% usuarios.forEach(usuario => { %>
+                <tr>
+                    <td><%= usuario.id_usuario %></td>
+                    <td><%= usuario.nombre %></td>
+                    <td><%= usuario.direccion %></td>
+                    <td><%= usuario.telefono %></td>
+                    <td><%= usuario.email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
